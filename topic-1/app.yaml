@@ -1,0 +1,6 @@
+runtime: nodejs20
+service: chapter-5
+
+predeploy:
+    - npm install
+    - npx sequelize db:migrate
