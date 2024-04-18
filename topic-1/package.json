@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "npx nodemon index.js",
         "start": "node index.js",
-        "predeploy": "npm install && npx sequelize db:migrate"
+        "gcp-build": "npm install && npx sequelize db:migrate"
     },
     "keywords": [],
     "author": "",
