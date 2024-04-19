@@ -7,6 +7,7 @@ exports.getAllStudents = async () => {
     const options = {
         include: ["class"],
     };
+    console.log("masuk");
 
     const data = await student.findAll(options);
 
