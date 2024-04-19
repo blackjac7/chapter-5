@@ -36,7 +36,7 @@ exports.getStudentById = async (req, res, next) => {
 exports.createStudent = async (req, res, next) => {
     try {
         let payload = req.body;
-        const { photo } = req.files;
+        const photo = req?.files?.photo;
         payload.class_id = +payload.class_id;
 
         if (!payload) {

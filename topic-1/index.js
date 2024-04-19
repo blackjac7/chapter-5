@@ -1,12 +1,18 @@
 require("dotenv").config();
 
 const express = require("express");
+const fs = require("fs");
+const path = "/workspace";
 const fileUpload = require("express-fileupload");
 const routes = require("./router");
 const errorHandlers = require("./middleware/errorHandlers");
 
 const app = express();
 const PORT = process.env.PORT || 4000;
+
+if (!fs.existsSync(path)) {
+    fs.mkdirSync(path, { recursive: true });
+}
 
 app.use(express.json());
 app.use(fileUpload({ useTempFiles: true }));

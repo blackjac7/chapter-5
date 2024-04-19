@@ -2,8 +2,8 @@ const { register, login, getProfile } = require("../../usecase/auth");
 
 exports.register = async (req, res, next) => {
     try {
-        const { email, password, name } = req.body;
-        const { photo } = req.files;
+        const { email, password, name } = req?.body;
+        const photo = req?.files?.photo;
 
         if (email == "" || !email) {
             return next({
