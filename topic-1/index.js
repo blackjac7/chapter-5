@@ -3,7 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
-const dir = path.join(__dirname, "/workspace");
+const dir = path.join(__dirname, "tmp");
 const fileUpload = require("express-fileupload");
 const routes = require("./router");
 const errorHandlers = require("./middleware/errorHandlers");
